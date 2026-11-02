@@ -160,30 +160,36 @@
                 </div>
                 
                 <div class="p-10 md:w-1/2 bg-white">
-                   <form name="contato" method="POST" data-netlify="true" class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="Seu nome completo">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Serviço de Interesse</label>
-                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
-                                <option>Projetos e Consultoria</option>
-                                <option>Energia Solar</option>
-                                <option>Automação</option>
-                                <option>SPDA e Aterramento</option>
-                                <option>Painéis e Subestações</option>
-                                <option>Outro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-                            <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="Descreva brevemente sua necessidade..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2">
-                            Enviar Solicitação
-                        </button>
-                    </form>
+                  <form name="contato" method="POST" data-netlify="true" class="space-y-4">
+    <!-- Campo oculto necessário para o Netlify processar corretamente -->
+    <input type="hidden" name="form-name" value="contato" />
+    
+    <div>
+        <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+        <input type="text" id="nome" name="nome" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="Seu nome completo">
+    </div>
+    
+    <div>
+        <label for="servico" class="block text-sm font-medium text-gray-700 mb-1">Serviço de Interesse</label>
+        <select id="servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+            <option value="Projetos e Consultoria">Projetos e Consultoria</option>
+            <option value="Energia Solar">Energia Solar</option>
+            <option value="Automação">Automação</option>
+            <option value="SPDA e Aterramento">SPDA e Aterramento</option>
+            <option value="Painéis e Subestações">Painéis e Subestações</option>
+            <option value="Outro">Outro</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="3" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="Descreva brevemente sua necessidade..."></textarea>
+    </div>
+    
+    <button type="submit" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2">
+        Enviar Solicitação
+    </button>
+</form>
                 </div>
                 
             </div>
